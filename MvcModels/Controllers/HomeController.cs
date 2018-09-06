@@ -48,7 +48,7 @@ namespace MvcModels.Controllers
             },
         };
 
-        public ActionResult Index(int id)
+        public ActionResult Index(int? id)
         {
             Person dataItem = personData.Where(p => p.PersonId == id).First();
             return View(dataItem);
