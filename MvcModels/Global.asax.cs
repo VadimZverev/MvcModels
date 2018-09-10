@@ -16,7 +16,7 @@ namespace MvcModels
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            ModelBinders.Binders.Add(typeof(AddressSummary), new AddressSummaryBinder());
+            //ModelBinders.Binders.Add(typeof(AddressSummary), new AddressSummaryBinder());
             //ValueProviderFactories.Factories.Insert(0, new CustomValueProviderFactory());
         }
     }
