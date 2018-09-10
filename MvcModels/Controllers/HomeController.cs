@@ -49,13 +49,12 @@ namespace MvcModels.Controllers
         public ActionResult Address(FormCollection formData)
         {
             IList<AddressSummary> addresses = new List<AddressSummary>();
-            try
+            if (TryUpdateModel(addresses, formData))
             {
-                UpdateModel(addresses, formData);
+                // действовать, как обычно
             }
-            catch (InvalidOperationException ex)
+            else
             {
-
                 // предоставить обратную связь пользователю
             }
             return View(addresses);
