@@ -49,7 +49,7 @@ namespace MvcModels.Controllers
         public ActionResult Address(/*IList<AddressSummary> addresses*/)
         {
             IList<AddressSummary> addresses = new List<AddressSummary>();
-            UpdateModel(addresses);
+            UpdateModel(addresses, new FormValueProvider(ControllerContext));
             //addresses = addresses ?? new List<AddressSummary>();
             return View(addresses);
         }
